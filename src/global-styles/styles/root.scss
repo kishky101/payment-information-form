@@ -1,0 +1,19 @@
+/// Root Styles file
+/// Here we define all the root variables we need for our project.
+/// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
+
+:root {
+    --color-primary: #5721f2;
+    --color-on-surface: #000;
+    --white-color: #FFFFFF;
+    --grey-grade1: #F8FAFF; 
+    --grey-grade2: #DADFE9; 
+    --grey-grade3: #AEB5C3; 
+    --grey-grade4: #EBEFF5; 
+    --grey-grade5: #ABB5C8; 
+    --black-color: #0D1016;
+    --blue-color: #2162E3;
+    --blue-hover: #3A78F4;
+    --blue-pressed: #1957D4;
+    --Montserrat-font: 'Montserrat', sans-serif;
+}

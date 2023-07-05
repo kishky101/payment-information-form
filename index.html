@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment information</title>
+</head>
+
+<!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
+
+<body>
+  <main id="home-page" class="layout">
+    
+    <div class="form">
+      <div class="form__container">
+        <header class="form__logo">
+          <img src="./assets/images/logo.svg" alt="logo" />
+          <span>PayTo</span>
+        </header>
+        <h1 class="form__h1">Add your informations</h1>
+        <form class="form__inputs">
+          <div class="form__input-container">
+            <label for="name">Name on card</label>
+            <input type="text" placeholder="John Doe" pattern="^((?:[A-Za-z]+ ?){1,3})$" />
+          </div>
+          <div class="form__input-container">
+            <label for="number">Card number</label>
+            <input type="text" placeholder="1234 3243 1571 3145" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" />
+          </div>
+          <div class="form__flex-inputs">
+            <div class="form__input-container">
+              <label for="date">Expiry date (MM/YY)</label>
+              <input type="text" placeholder="05/25" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" />
+            </div>
+            <div class="form__input-container">
+              <label for="cvv">CVV</label>
+              <input type="text" placeholder="415" pattern="([0-9]{3})" />
+            </div>
+          </div>
+          <button class="form__button" disabled>Next step</button>
+        </form>
+      </div>
+    </div>
+    <div class="layout__image">
+      <img src="./assets/images/desktop-credit-card.png" alt="credit card background image">
+      <img src="./assets/images/tablet-credit-card.png" alt="credit card background image">
+      <img src="./assets/images/mobile-credit-card.png" alt="credit card background image">
+    </div>
+  </main>
+
+  <script type="module" src="/src/global-scripts/main.js"></script>
+  <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
+  <script type="module" src="/src/pages/payment-information/scripts/payment-information.js"></script>
+</body>
+
+</html>

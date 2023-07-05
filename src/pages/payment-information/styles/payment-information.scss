@@ -1,0 +1,179 @@
+.form {
+    padding: 6.4rem;
+    background-color: var(--white-color);
+
+    & &__logo {
+        height: 2rem;
+        display: flex;
+        gap: .9rem;
+
+        img {
+            max-width: 100%;
+        }
+
+        span {
+            font-size: 1.8rem;
+            letter-spacing: -0.54px;
+            font-family: var(--Montserrat-font);
+            font-weight: 600;
+            color: var(--black-color);
+        }
+    }
+
+    & &__h1 {
+        font-size: 4rem;
+        color: var(--black-color);
+        font-family: var(--Montserrat-font);
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -1.2px;
+        margin-top: 11.1rem;
+        margin-bottom: 4.8rem;
+        max-width: 252px;
+    }
+
+    & &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+    }
+
+    & &__input-container {
+        position: relative;
+
+        label {
+            position: absolute;
+            font-size: 1.2rem;
+            color: var(--grey-grade3);
+            font-weight: 500;
+            top: 1.2rem;
+            left: 2.4rem;
+            font-family: var(--Montserrat-font);
+            line-height: 100%;
+            letter-spacing: -0.36px;
+        }
+
+        input {
+            width: 100%;
+            padding: 2.8rem 2.4rem 1.2rem;
+            font-size: 1.6rem;
+            font-family: var(--Montserrat-font);
+            border: 1px solid var(--grey-grade2);
+            color: var(--black-color);
+            font-weight: 500;
+            border-radius: 1.8rem;
+            letter-spacing: -0.48px;
+            line-height: 100%;
+            max-height: 56px;
+            outline: none;
+            transition: all .2s;
+
+            &:hover {
+                border-color: var(--grey-grade5);
+            }
+
+            &:focus-within, &:focus {
+                border:1px solid var(--black-color);
+            }
+
+            &::placeholder {
+                color: var(--black-color);
+            }
+
+            &:invalid {
+                border-color: red;
+            }
+        }
+    }
+
+    & &__flex-inputs {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr;
+        column-gap: 1.4rem;
+    }
+
+    & &__button {
+        margin-top: 1.8rem;
+        padding: 2rem 4rem;
+        border-radius: 1.8rem;
+        background-color: var(--blue-color);
+        border: none;
+        color: var(--white-color);
+        font-size: 1.6rem;
+        font-family: var(--Montserrat-font);
+        font-weight: 600;
+        letter-spacing: -0.48px;
+        transition: background-color .2s;
+        cursor: pointer;
+
+        &:disabled {
+            background-color: var(--grey-grade4);
+        }
+
+        &:hover {
+            &:not(:disabled) {
+                background-color: var(--blue-hover);
+            } 
+        }
+
+        &:focus {
+            &:not(:disabled) {
+                background-color: var(--blue-pressed);
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+
+        & &__container {
+            max-width: 440px;
+        }
+    
+        & &__logo {
+            position: absolute;
+            top: 0;
+            left: 45%;
+            right: 40%;
+            top: 4.8rem;
+            z-index: 9999;
+        }
+
+        & &__h1 {
+            margin-top: 0;
+            text-align: center;
+            margin: 0 auto 4.8rem;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        padding: 3.2rem 1.6rem;
+
+        & &__logo {
+            position: absolute;
+            top: 0;
+            left: 39%;
+            right: 40%;
+            top: 3.2rem;
+        }
+
+        & &__h1 {
+            margin-top: 0;
+            font-size: 2.4rem;
+            text-align: left;
+            //margin: 0 auto 4.8rem;
+            margin: 0 0 3.2rem;
+            letter-spacing: -0.72px;
+        }
+
+        & &__flex-inputs {
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            column-gap: 1.4rem;
+        }
+    }
+}
+
+
